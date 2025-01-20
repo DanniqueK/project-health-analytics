@@ -1,22 +1,26 @@
 name: Deploy to GitHub Pages
-
 on:
   push:
-    branches:
-      - main
-
+    branches: [main]
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: |
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Install and Build
+        run: |
           cd frontend
           npm ci
-          npm run deploy:github
-
-permissions:
-  contents: write
+          npm run build:github
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: frontend/dist/browser
+          branch: gh-pages
