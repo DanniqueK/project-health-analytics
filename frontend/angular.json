@@ -66,12 +66,18 @@
 			  },
 			  "production-github": {
 				"baseHref": "/project-health-analytics/",
-				"outputPath": "dist/browser",
+				"outputPath": "dist/wealthcare-portal/browser",
 				"assets": [
             "src/favicon.ico",
             "src/assets",
             "src/404.html"
-          ]
+          ], "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "2mb"
+                }
+              ]
 			  }
 			},
 			"defaultConfiguration": "production"

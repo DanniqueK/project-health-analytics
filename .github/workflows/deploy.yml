@@ -28,11 +28,11 @@ jobs:
         run: |
           cd frontend
           ng build --configuration production-github
-          cp dist/browser/index.html dist/browser/404.html
+          cp dist/wealthcare-portal/browser/index.html dist/wealthcare-portal/browser/404.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: frontend/dist/browser
+          folder: frontend/dist/wealthcare-portal/browser
           branch: gh-pages
           clean: true
