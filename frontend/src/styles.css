@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+	/* To use on background */
+	--background: var(--lighter);
+
+	/* The colours of our project */
+	--primary: #5a968a;
+	--secondary: #92c6d3;
+	--accent: #6ebbcf;
+
+	/* The shades in our project */
+	--lighter: #f8f8f8;
+	--light: #dcdcdc;
+	--dark: #303030;
+	--darker: #141414;
+
+	/* Additional colours to work with */
+	--primarylighter: #f4fffd; /* A mix between --primary & --lighter | Might replace with css color-mix() down the line */
+}
+
+body {
+	margin: 0;
+	padding-bottom: 0 !important;
+	height: 100vh;
+	background-color: var(--background);
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}

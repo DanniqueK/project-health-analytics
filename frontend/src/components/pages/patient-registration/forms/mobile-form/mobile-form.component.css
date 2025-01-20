@@ -1,0 +1,33 @@
+#phone {
+	height: 23rem;
+	width: 15.5rem;
+}
+
+#phone-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem 0rem;
+	justify-content: space-around;
+
+	position: relative;
+	left: 0.35rem;
+	padding-right: 0.35rem;
+}
+
+app-input {
+	width: 10rem;
+}
+
+hr {
+	margin: 0;
+	border-color: rgba(255, 255, 255, 0.5);
+}
+
+.wrapper-head {
+	position: relative;
+
+	margin: 0;
+	padding: 0;
+	margin-bottom: -0.75rem;
+	left: -0.35rem;
+}

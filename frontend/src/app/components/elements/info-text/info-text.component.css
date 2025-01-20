@@ -1,0 +1,17 @@
+h6 {
+	margin: 0;
+	font-weight: 600;
+	color: var(--dark);
+}
+
+p {
+	margin: 0;
+	color: dimgray;
+
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	white-space: pre-line;
+}

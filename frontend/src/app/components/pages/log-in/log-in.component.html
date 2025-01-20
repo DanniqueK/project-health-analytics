@@ -1,0 +1,46 @@
+<main class="full-page">
+	<section class="body-container">
+		<header class="top-container">
+			<img src="../../../../assets/ITM.png" />
+			<h5>ITM LOGIN PORTAL</h5>
+		</header>
+		<article class="form-greeter">
+			<p class="title">Welcome to the ITM Login</p>
+			<p class="subtext">Please fill out your credentials</p>
+		</article>
+		<form #form="ngForm" (ngSubmit)="checkUserInput()">
+			<article class="input-container">
+				<label for="bsnOrEmail">Email Or Citizenservice Number</label>
+				<input [(ngModel)]="bsnOrEmail" type="text" name="bsnOrEmail" id="bsnOrEmail" />
+			</article>
+			<article class="input-container">
+				<label for="password">Password</label>
+				<input [(ngModel)]="password" type="password" name="password" id="password" />
+			</article>
+			<article class="submit-container">
+				<article class="show-password">
+					<input type="checkbox" name="showPassword" id="showPassword" />
+					<label for="showPassword">Show Password</label>
+				</article>
+				<input type="submit" value="Login" />
+			</article>
+			<article *ngIf="errorMessage" class="errorMessage">
+				{{ errorMessage }}
+			</article>
+			<article *ngIf="succesMessage" class="succesMessage">
+				{{ succesMessage }}
+			</article>
+			<p>Your ITM Portal Provides</p>
+			<article class="info-container">
+				<article class="info">
+					<p>Medical Insigths</p>
+					<p class="info-subtext">Navigate through digitized health records with ease.</p>
+				</article>
+				<article class="info">
+					<p>Health Patterns</p>
+					<p class="info-subtext">Track health patterns of your patients to assist with your assessments.</p>
+				</article>
+			</article>
+		</form>
+	</section>
+</main>

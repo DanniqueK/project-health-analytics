@@ -1,0 +1,24 @@
+<section class="patient-analytics-container">
+	<!-- Sidebar containing health data list -->
+	<aside class="sidebar">
+		<app-health-data-list (fieldSelected)="onFieldSelected($event)"> </app-health-data-list>
+	</aside>
+
+	<!-- Display error message if it exists -->
+	<aside *ngIf="errorMessage" class="error-message">
+		{{ errorMessage }}
+	</aside>
+
+	<!-- Main content area -->
+	<main class="content">
+		<!-- Display patient graphs if a field is selected -->
+		<aside *ngIf="selectedFieldData">
+			<app-patient-graphs></app-patient-graphs>
+		</aside>
+	</main>
+
+	<!-- Sidebar containing analytics options -->
+	<aside class="sidebar">
+		<app-analytics-sidebar></app-analytics-sidebar>
+	</aside>
+</section>

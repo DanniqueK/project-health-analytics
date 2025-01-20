@@ -1,0 +1,42 @@
+:host {
+	display: flex;
+}
+
+#toggle {
+	position: relative;
+	cursor: pointer;
+}
+
+input {
+	cursor: pointer;
+	appearance: none;
+
+	width: 1.5rem;
+	height: 1.5rem;
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--light);
+	border-radius: 0.35rem;
+	background-color: white;
+}
+
+input:hover {
+	border-color: var(--primary);
+}
+
+input:checked {
+	background-color: var(--primarylighter);
+	border-color: var(--primary);
+}
+
+input:checked ~ .checkmark {
+	color: var(--primary);
+}
+
+.checkmark {
+	position: absolute;
+	top: 0.25rem;
+	left: 0.55rem;
+	pointer-events: none;
+	color: var(--primarylighter);
+}

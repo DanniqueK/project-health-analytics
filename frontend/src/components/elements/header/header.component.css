@@ -1,0 +1,83 @@
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
+	font-size: 1.6rem;
+	background-color: var(--primary);
+	position: relative;
+}
+
+.logo-section {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	height: 40px;
+	margin-right: 20px;
+}
+
+.nav-links {
+	display: flex;
+	flex-grow: 1;
+}
+
+.nav-patient {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	padding: 5px;
+}
+
+#currentPatient {
+	margin: unset;
+}
+
+.nav-links a {
+	color: var(--secondary);
+	text-decoration: none;
+	margin-right: 20px;
+	padding: 5px;
+}
+
+.nav-links a:hover {
+	color: var(--lighter);
+}
+
+.active {
+	font-weight: bold;
+	color: white !important;
+	border-bottom: 2px solid white;
+}
+
+.nav-icons {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.nav-icons .icon {
+	color: var(--secondary);
+	margin-left: 15px;
+}
+
+.nav-icons .icon:hover {
+	color: var(--lighter);
+}
+
+.nav-icons button {
+	background-color: transparent;
+	border: none;
+}
+
+.user-icon,
+.home-icon,
+.login-icon {
+	transform: scale(2);
+}
+
+.userDropdown {
+	cursor: pointer;
+}

@@ -1,0 +1,14 @@
+<!-- Sidebar containing patient name and health data fields -->
+<aside class="sidebar">
+	<header id="patient-name">{{ patientName }}</header>
+	<nav class="button-list">
+		<!-- Iterate over health data fields and create a button for each field -->
+		<button
+			*ngFor="let field of healthDataFields"
+			class="button"
+			[class.selected]="field === selectedField"
+			(click)="selectField(field)">
+			{{ field }}
+		</button>
+	</nav>
+</aside>

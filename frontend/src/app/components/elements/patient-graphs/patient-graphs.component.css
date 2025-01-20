@@ -1,0 +1,171 @@
+.graph-container,
+.table-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: calc(100vh - 300px);
+	margin: 5% 0 0 0;
+	position: relative;
+	background-color: white;
+	padding: 20px;
+	box-sizing: border-box;
+	max-width: calc(90vw - 500px);
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.graph-title {
+	font-size: x-large;
+	color: var(--dark);
+	margin: 0;
+	padding: 10px;
+	background-color: var(--lighter);
+	width: calc(100% - 20px);
+	max-width: 550px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.toggle-buttons button {
+	padding: 0.5rem 1rem;
+	border: none;
+	cursor: pointer;
+	background-color: var(--secondary);
+	color: white;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+.toggle-buttons button.active {
+	background-color: var(--primary);
+}
+
+.toggle-buttons button:disabled {
+	background-color: var(--disabled);
+	cursor: not-allowed;
+}
+
+/* Shared Controls */
+.shared-controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding: 10px;
+	background-color: var(--lighter);
+	border-radius: 4px;
+}
+
+.entry-controls,
+.order-controls {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.entry-controls label {
+	color: var(--dark);
+	font-weight: 500;
+}
+
+.entry-controls select {
+	padding: 4px 8px;
+	border: 1px solid #ccc;
+	background-color: #f9f9f9;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+.entry-controls select:hover {
+	background-color: #e0e0e0;
+}
+
+.order-controls button {
+	padding: 0.5rem 1rem;
+	border: none;
+	cursor: pointer;
+	background-color: var(--secondary);
+	color: white;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+.order-controls button.active {
+	background-color: var(--primary);
+}
+
+.order-controls button.ascending {
+	background-color: #d3d3d3; /* Light grey for ascending */
+}
+
+.order-controls button.descending {
+	background-color: #a9a9a9; /* Dark grey for descending */
+}
+
+/* Table styles */
+.table-wrapper {
+	overflow-y: auto;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+th,
+td {
+	border: 1px solid #ccc;
+	padding: 0.5rem;
+	text-align: left;
+}
+
+th {
+	background-color: #f9f9f9;
+}
+
+.empty-row {
+	text-align: center;
+	color: #999;
+}
+
+.scrollable-tbody {
+	display: block;
+	overflow-y: auto;
+	width: 100%;
+}
+
+.scrollable-tbody tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.scroll-indicator {
+	text-align: center;
+	color: #999;
+	margin-top: 0.5rem;
+}
+
+.error-message {
+	color: red;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.no-data-message {
+	text-align: center;
+	margin-top: 1rem;
+	color: #999;
+}

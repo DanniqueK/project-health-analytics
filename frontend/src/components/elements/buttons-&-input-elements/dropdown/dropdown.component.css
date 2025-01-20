@@ -1,0 +1,39 @@
+:host {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	display: block;
+	position: relative;
+	left: -0.35rem;
+	margin: 0.1rem;
+
+	font-size: larger;
+	font-weight: 400;
+	color: var(--dark);
+}
+
+select {
+	position: relative;
+	left: -0.35rem;
+
+	padding: 0.25rem;
+	padding-left: 0.35rem;
+	height: 2.25rem;
+	width: 10.875rem;
+
+	border: 2px solid var(--light);
+	border-radius: 0.65rem;
+	background-color: white;
+
+	font-weight: 500;
+}
+
+select:focus {
+	color: var(--dark);
+}
+
+.invalid {
+	border-color: orangered;
+}

@@ -1,0 +1,41 @@
+<aside class="analytics-sidebar">
+	<h2>Analytics</h2>
+
+	<button class="analytics-sidebar-button" (click)="generateEntry()">New Entry</button>
+	<section class="error-block">
+		<p *ngIf="noEntriesFound" id="noEntriesFound">No entries found. Please generate a new entry.</p>
+		<p *ngIf="entryCreationFailed" id="entryCreationFailed">Failed to generate an entry.</p>
+	</section>
+	<ul class="entry-list">
+		<li class="entry" *ngFor="let entry of entries">
+			<section class="entry-header" (click)="toggleDetails($event)">
+				<p><strong>Analysis from:</strong></p>
+				<p>{{entry.date}}</p>
+			</section>
+			<section class="entry-details-container">
+				<section class="entry-details is-hidden">
+					<article>
+						<p class="entry-details__header">Summary</p>
+						<p class="entry-details__text">
+							{{entry.summary}}
+						</p>
+					</article>
+
+					<article id="prediction">
+						<p class="entry-details__header">Prediction</p>
+						<p class="entry-details__text">
+							{{entry.prediction}}
+						</p>
+					</article>
+
+					<article>
+						<p class="entry-details__header">Recommendation</p>
+						<p class="entry-details__text">
+							{{entry.recommendation}}
+						</p>
+					</article>
+				</section>
+			</section>
+		</li>
+	</ul>
+</aside>

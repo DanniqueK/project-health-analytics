@@ -1,0 +1,44 @@
+<nav>
+	<section class="logo-section">
+		<img src="../../../../assets/ITM.png" alt="ITM Logo" class="logo" />
+	</section>
+	<section class="nav-links">
+		<section *ngIf="authenticationService.authenticateAsMedicalProfessional() | async">
+			<a routerLink="/patient-portal" routerLinkActive="active">Overview</a>
+			<a routerLink="/mp-portal" routerLinkActive="active">Patients</a>
+		</section>
+		<section *ngIf="authenticationService.authenticateAsPatient() | async">
+			<a routerLink="/patient-portal" routerLinkActive="active">Overview</a>
+		</section>
+	</section>
+	<section
+		*ngIf="(authenticationService.authenticateAsMedicalProfessional() | async) || (authenticationService.authenticateAsPatient() | async)"
+		class="nav-patient">
+		<p id="currentPatient">{{patientName}}</p>
+	</section>
+	<section
+		*ngIf="(authenticationService.authenticateAsMedicalProfessional() | async) || (authenticationService.authenticateAsPatient() | async)"
+		class="nav-icons">
+		<button class="userDropdown" mat-icon-button [matMenuTriggerFor]="userMenu">
+			<mat-icon class="icon user-icon" fontIcon="person"></mat-icon>
+		</button>
+		<mat-menu #userMenu="matMenu" class="menu">
+			<a mat-menu-item (click)="onLogout()" class="logout">Logout</a>
+		</mat-menu>
+		<a *ngIf="authenticationService.authenticateAsMedicalProfessional() | async" routerLink="/mp-portal">
+			<mat-icon class="icon home-icon" fontIcon="home"></mat-icon>
+		</a>
+		<a *ngIf="authenticationService.authenticateAsPatient() | async" routerLink="/patient-portal">
+			<mat-icon class="icon home-icon" fontIcon="home"></mat-icon>
+		</a>
+	</section>
+	<section
+		*ngIf="!(authenticationService.authenticateAsMedicalProfessional() | async) && !(authenticationService.authenticateAsPatient() | async)"
+		class="nav-icons">
+		<a routerLink="log-in">
+			<button>
+				<mat-icon class="icon login-icon" fontIcon="login"></mat-icon>
+			</button>
+		</a>
+	</section>
+</nav>

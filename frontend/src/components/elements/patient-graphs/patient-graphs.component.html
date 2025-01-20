@@ -1,0 +1,76 @@
+<section class="toggle-buttons">
+	<button (click)="setView('graph')" [class.active]="currentView === 'graph'" [disabled]="!isNumericData">
+		Show Graph
+	</button>
+	<button (click)="setView('table')" [class.active]="currentView === 'table'">Show Table</button>
+</section>
+
+<section class="shared-controls">
+	<!-- Title for the chart/table -->
+	<h2 class="graph-title">{{title}}</h2>
+
+	<!-- Entry Amount Selector and Order Toggle Button -->
+	<section class="right-controls">
+		<section class="entry-controls">
+			<label for="entryAmount">Entries:</label>
+			<select id="entryAmount" (change)="setTableLength($event)" [value]="tableLength">
+				<option value="all">All</option>
+				<option value="8">8</option>
+				<option value="16">16</option>
+				<option value="32">32</option>
+				<option value="64">64</option>
+				<option value="128">128</option>
+			</select>
+		</section>
+
+		<section class="order-controls">
+			<label>Sort by:</label>
+			<button (click)="toggleOrder()" [class.active]="order === 'latest'">
+				{{ order === 'latest' ? 'Latest' : 'Oldest' }}
+			</button>
+		</section>
+	</section>
+</section>
+
+<section class="graph-container" *ngIf="currentView === 'graph' && isNumericData">
+	<ngx-charts-line-chart
+		*ngIf="data.length"
+		[results]="data"
+		[xAxis]="true"
+		[yAxis]="true"
+		[xAxisLabel]="'Date'"
+		[yAxisLabel]="'Value'"
+		[showGridLines]="true"
+		[curve]="curve"
+		[scheme]="colorScheme"
+		[yScaleMin]="minValue"
+		[yScaleMax]="maxValue">
+	</ngx-charts-line-chart>
+</section>
+
+<section class="table-container" *ngIf="currentView === 'table' || !isNumericData">
+	<!-- Table Wrapper -->
+	<section class="table-wrapper">
+		<table class="scrollable-tbody">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>{{title}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let entry of data[0]?.series | slice:0:tableLength">
+					<td>{{ entry?.name }}</td>
+					<td>{{ entry?.value }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<!-- Scroll Indicator -->
+	<aside *ngIf="showScrollIndicator" class="scroll-indicator">Scroll for more...</aside>
+</section>
+
+<!-- Error handling -->
+<aside *ngIf="errorMessage" class="error-message">{{ errorMessage }}</aside>
+<aside *ngIf="!data.length && !errorMessage && currentView === 'graph'" class="no-data-message">No data found.</aside>

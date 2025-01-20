@@ -1,0 +1,24 @@
+<app-info-text
+	[head]="'Contact Info'"
+	[body]="'The patient\'s current place of residence,\n as well as other relevant contact info.'" />
+<app-formgroup-box id="address" [icon]="addressIcon" [head]="'Address'">
+	<section id="address-wrapper">
+		<section id="address-big">
+			<app-input [control]="'street'" [placeholder]="'Europalaan'">Street</app-input>
+			<app-input [control]="'city'" [placeholder]="'Kaatsheuvel'">City</app-input>
+			<app-input [control]="'province'" [placeholder]="'Noord-Brabant'">Province</app-input>
+			<app-input [control]="'country'" [placeholder]="'Netherlands'">Country</app-input>
+		</section>
+		<section id="address-small">
+			<app-input [control]="'number'" [maxlength]="6" class="small-input" [placeholder]="'1A'">Number</app-input>
+			<app-input
+				[control]="'postalCode'"
+				[maxlength]="7"
+				class="small-input"
+				[placeholder]="'1234 AB'"
+				[regex]="postalcode"
+				>Postal Code</app-input
+			>
+		</section>
+	</section>
+</app-formgroup-box>

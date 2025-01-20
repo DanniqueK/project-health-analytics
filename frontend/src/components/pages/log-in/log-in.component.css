@@ -1,0 +1,136 @@
+body {
+	display: flex;
+	width: 100%;
+	background-color: var(--lighter);
+	justify-content: center;
+	align-items: center;
+}
+
+.body-container {
+	display: flex;
+	width: 600px;
+	background-color: #ffffff;
+	flex-direction: column;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: var(--light);
+	margin: 20px;
+}
+
+.full-page {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+}
+
+.top-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	border-color: var(--light);
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.top-container img {
+	height: 50px;
+}
+
+.form-greeter {
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+	font-size: x-large;
+	margin-bottom: 15px;
+	border-width: 2px;
+	width: 70%;
+	border-style: solid;
+	border-color: var(--light);
+}
+
+.submit-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.show-password {
+	display: flex;
+	flex-direction: row;
+}
+
+input[type="submit"] {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-width: 2px;
+	border-color: var(--light);
+	width: 50%;
+	border-radius: 5px;
+	background-color: #ffffff;
+	font-size: xx-large;
+	font-style: bold;
+}
+
+label {
+	font-size: large;
+}
+
+.subtext {
+	font-size: small;
+	color: #8c8c8c;
+}
+
+.info-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+
+.info-subtext {
+	font-size: small;
+	color: #8c8c8c;
+}
+
+.errorMessage {
+	display: flex;
+	justify-self: center;
+	color: red;
+	font-size: large;
+	margin-top: 1em;
+	text-align: center;
+}
+
+.succesMessage {
+	display: flex;
+	justify-self: center;
+	color: green;
+	font-size: large;
+	margin-top: 1em;
+	text-align: center;
+}

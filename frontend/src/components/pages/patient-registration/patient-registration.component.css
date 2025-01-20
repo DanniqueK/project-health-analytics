@@ -1,0 +1,122 @@
+:host {
+	padding-top: 5rem;
+
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	gap: 1.5rem;
+}
+
+#input-form-boxes {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-between;
+
+	align-items: flex-end;
+}
+
+form {
+	width: 71.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+hr {
+	margin: 0;
+	border-color: rgba(255, 255, 255, 0.5);
+}
+
+.vertical-hr {
+	height: 22.75rem;
+}
+
+app-input {
+	width: 10rem;
+}
+
+#under-slab {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+#identifiers {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+
+	gap: 2rem;
+}
+
+#form-buttons {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+
+	gap: 0.5rem;
+}
+
+#save {
+	--prim-color: var(--primary);
+	--sec-color: var(--primarylighter);
+}
+
+#title-card {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	position: relative;
+
+	justify-content: center;
+	align-self: flex-start;
+
+	height: 4rem;
+
+	gap: 0rem 0.5rem;
+}
+
+#title-card app-return-button {
+	position: absolute;
+	left: -6rem;
+}
+
+#title-card hr {
+	height: 100%;
+	width: 0.175rem;
+
+	background-color: var(--primary);
+	filter: saturate(25%);
+}
+
+#infotext-title,
+#infotext-subtext {
+	padding: 0;
+	margin: 0;
+
+	font-size: 1.4rem;
+	font-weight: 600;
+
+	filter: saturate(25%);
+}
+
+#infotext-title {
+	color: var(--primary);
+}
+
+#infotext-subtext {
+	color: white;
+	-webkit-text-stroke: 2px var(--primary);
+	paint-order: stroke fill;
+}
+
+#spinner {
+	align-self: center;
+}

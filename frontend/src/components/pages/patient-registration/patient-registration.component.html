@@ -1,0 +1,42 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" (keydown)="weirdBugFix($event)" autocomplete="nope">
+	<section id="title-card">
+		<app-return-button (click)="this.form.reset(this.defaultValues)" />
+		<hr />
+		<img ngSrc="assets/ITM-s.png" width="65" height="65" />
+		<p id="infotext-title">ITM Portal</p>
+		<p id="infotext-subtext">Register your new patient</p>
+	</section>
+
+	<main id="input-form-boxes">
+		<!-- All personal data -->
+		<app-personal-form />
+
+		<hr class="vertical-hr" />
+
+		<!-- The patient's address -->
+		<app-address-form />
+		<!-- Contact information -->
+		<app-mobile-form />
+	</main>
+
+	<hr />
+
+	<section id="under-slab">
+		<section id="identifiers">
+			<app-input [control]="'BSN'" [maxlength]="9" [placeholder]="'123456789'" [regex]="numbers" data-cy="BSN"
+				><fa-icon [icon]="passportIcon" size="sm" /> BSN</app-input
+			>
+			<app-input [control]="'userName'" [placeholder]="'johndoe'" [maxlength]="16" data-cy="Username"
+				>Username</app-input
+			>
+		</section>
+
+		<section id="form-buttons">
+			<app-button (click)="location.back(); this.form.reset(this.defaultValues)" id="cancel">Cancel</app-button>
+			<app-button type="submit" [type]="'submit'" [disabled]="!form.valid || processing == true" id="save"
+				>Save</app-button
+			>
+			<fa-icon *ngIf="processing" id="spinner" [icon]="spinner" size="lg" [animation]="'spin-pulse'" />
+		</section>
+	</section>
+</form>

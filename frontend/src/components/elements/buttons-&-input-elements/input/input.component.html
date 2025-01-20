@@ -1,0 +1,16 @@
+<label for="input"><ng-content /></label>
+<input
+	id="user-input"
+	type="{{type}}"
+	placeholder="{{placeholder}}"
+	min="{{min}}"
+	max="{{max}}"
+	minlength="{{minlength}}"
+	maxlength="{{maxlength}}"
+	name="input"
+	formControlName="{{control}}"
+	matTooltip="{{ValidatorForm.toolTipCreator(control)}}"
+	matTooltipDisabled="{{!ValidatorForm.form.controls[control].touched && !ValidatorForm.form.controls[control].valid}}"
+	[class.invalid]="ValidatorForm.form.controls[control].touched && !ValidatorForm.form.controls[control].valid"
+	autocomplete="nope"
+	(keypress)="regexCheck($event)" />

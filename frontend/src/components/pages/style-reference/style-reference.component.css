@@ -1,0 +1,64 @@
+li {
+	list-style: square;
+}
+
+.header {
+	color: var(--primary);
+}
+
+.category {
+	background-color: white;
+	margin: 2rem;
+	padding: 1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	width: min-content;
+}
+
+.blocks {
+	color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+#primary {
+	background-color: var(--primary);
+}
+#secondary {
+	background-color: var(--secondary);
+}
+#accent {
+	background-color: var(--accent);
+}
+
+#lighter {
+	background-color: var(--lighter);
+}
+#light {
+	background-color: var(--light);
+}
+#dark {
+	background-color: var(--dark);
+}
+#darker {
+	background-color: var(--darker);
+}
+#lighter,
+#light {
+	color: black;
+}
+
+#primary,
+#secondary,
+#accent,
+#lighter,
+#light,
+#dark,
+#darker {
+	width: 7.5rem;
+	height: 7.5rem;
+	height: 7.5rem;
+	line-height: 7.5rem;
+	text-align: center;
+}

@@ -1,0 +1,78 @@
+:host {
+	width: 60rem;
+	max-height: 22rem;
+	display: flex;
+	overflow-y: auto;
+}
+
+table {
+	width: 100%;
+	text-align: center;
+}
+
+.mat-column-name {
+	padding-left: 3.125rem; /* 50px converted */
+	font-size: 1.25rem; /* 20px converted */
+}
+
+.mat-column-birth {
+	padding-left: 8.125rem; /* 130px converted */
+	font-size: 1.25rem; /* 20px converted */
+}
+
+.mat-column-view {
+	padding-left: 0.625rem; /* 10px converted */
+	font-size: 1.25rem; /* 20px converted */
+}
+
+/* Make the 'view-button' larger and apply the --secondary background color */
+.view-button {
+	background-color: var(--secondary);
+	color: black;
+	font-size: 1.125rem; /* 18px converted */
+	padding: 0.625rem 1.25rem; /* 10px 20px converted */
+	border-radius: 0.25rem; /* 4px converted */
+	text-transform: none;
+}
+
+/* Change hover effect to cyan */
+.view-button:hover {
+	background-color: var(--primarylighter);
+	border-color: var(--primary);
+	color: var(--primary);
+	cursor: pointer;
+}
+
+.add-button {
+	font-weight: bolder;
+	border-width: 0.1875rem; /* 3px converted */
+	border-style: solid;
+	border-color: var(--primary);
+	width: 2rem;
+	height: 2rem;
+	font-size: large;
+	border-radius: 0.2rem;
+	color: var(--primary);
+	background-color: white;
+}
+
+.add-button:hover {
+	background-color: var(--primarylighter);
+	border-color: var(--accent);
+	color: var(--accent);
+	cursor: pointer;
+}
+
+.error-row {
+	background-color: #fff3f3;
+}
+
+.error-row td {
+	color: #721c24 !important;
+	text-align: center !important;
+	font-weight: 500;
+}
+
+.error-row .mat-button {
+	display: none;
+}

@@ -1,0 +1,19 @@
+<app-formgroup-box id="phone" [icon]="phoneIcon" [head]="'Mobile Phone'">
+	<section id="phone-wrapper">
+		<h6 class="wrapper-head">Patient</h6>
+		<app-input [control]="'phone'" [maxlength]="20" [type]="'tel'" [placeholder]="'+31 06 12345678'" [regex]="phone"
+			>Phone Number</app-input
+		>
+		<hr />
+		<h6 class="wrapper-head">Emergency Contact</h6>
+		<app-input [control]="'contactName'" [placeholder]="'Jane Doe'">Contact Name</app-input>
+		<app-input
+			[control]="'contactPhone'"
+			[maxlength]="20"
+			[type]="'tel'"
+			[placeholder]="'+31 06 12345678'"
+			[regex]="phone"
+			>Contact Phone</app-input
+		>
+	</section>
+</app-formgroup-box>

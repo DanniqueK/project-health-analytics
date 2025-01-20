@@ -1,0 +1,16 @@
+app-button {
+	width: 3.5rem;
+	height: 3.5rem;
+
+	border-radius: 10rem;
+
+	--prim-color: var(--primary);
+	filter: saturate(25%);
+}
+
+fa-icon {
+	padding: 0;
+	margin: 0;
+
+	color: var(--primary);
+}

@@ -1,0 +1,22 @@
+<!-- Display error message if it exists -->
+<p class="errorMessage">{{ errorMessage }}</p>
+<section>
+	<!-- Search input field -->
+
+	<mat-form-field>
+		<mat-label>Search</mat-label>
+		<input
+			[(ngModel)]="searchedPatient"
+			(ngModelChange)="onInputChange()"
+			(keydown)="onKeyDown($event)"
+			type="search"
+			name="searchedPatient"
+			matInput
+			placeholder="Jane doe" />
+	</mat-form-field>
+
+	<!-- Search button -->
+	<button (click)="searchPatient()" id="searchButton">
+		<fa-icon [icon]="fasearch" size="3x"></fa-icon>
+	</button>
+</section>

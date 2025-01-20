@@ -1,0 +1,16 @@
+<app-info-text
+	[head]="'User Info'"
+	[body]="'The patient\'s personal information,\n to identify and address the patient with.'" />
+<app-formgroup-box id="personal" [icon]="personIcon" [head]="'Personal Details'">
+	<section id="identity-set">
+		<app-input [control]="'firstName'" [placeholder]="'John'">First Name</app-input>
+		<app-input [control]="'middleName'">Middle Name(s)</app-input>
+		<app-input [control]="'lastName'" [placeholder]="'Doe'">Last Name</app-input>
+		<app-input [control]="'dateOfBirth'" [type]="'datetime-local'">Date of Birth</app-input>
+	</section>
+	<hr />
+	<section id="personal-other">
+		<app-dropdown [control]="'marrage'" [optionArray]="maritalStatus">Marital Status</app-dropdown>
+		<app-input [control]="'insurance'" [placeholder]="'Holtow Insurance'">Insurance</app-input>
+	</section>
+</app-formgroup-box>
