@@ -28,13 +28,7 @@ jobs:
         working-directory: ./frontend
         run: |
           ng build --configuration production-github
-          mkdir -p dist/browser
-          cp -r dist/wealthcare-portal/browser/* dist/browser/
           cp dist/browser/index.html dist/browser/404.html
-
-      - name: List directory structure
-        working-directory: ./frontend
-        run: ls -R dist/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

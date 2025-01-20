@@ -65,7 +65,7 @@
 				]
 			  },
 			  "production-github": {
-				"baseHref": "/github_health_analytics/",
+				"baseHref": "/project-health-analytics/",
 				"outputPath": "dist/browser",
 				"assets": [
             "src/favicon.ico",
