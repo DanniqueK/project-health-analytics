@@ -18,17 +18,17 @@ jobs:
           cache-dependency-path: frontend/package-lock.json
 
       - name: Install Dependencies
+        working-directory: ./frontend
         run: |
-          cd frontend
           npm ci
           npm install -g @angular/cli
           npm install angular-cli-ghpages --save-dev
 
       - name: Build
+        working-directory: ./frontend
         run: |
-          cd frontend
           ng build --configuration production-github
-          cp dist/wealthcare-portal/browser/index.html dist/wealthcare-portal/browser/404.html
+          cp ./dist/wealthcare-portal/browser/index.html ./dist/wealthcare-portal/browser/404.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
