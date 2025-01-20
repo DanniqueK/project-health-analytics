@@ -28,6 +28,8 @@ jobs:
         run: |
           cd frontend
           ng build --configuration production-github
+          mkdir -p dist/wealthcare-portal/browser
+          cp -r dist/browser/* dist/wealthcare-portal/browser/
           cp dist/wealthcare-portal/browser/index.html dist/wealthcare-portal/browser/404.html
 
       - name: Deploy
