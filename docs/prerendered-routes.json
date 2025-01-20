@@ -1,0 +1,13 @@
+{
+  "routes": [
+    "/dev-style-test",
+    "/log-in",
+    "/mp-portal",
+    "/mp-portal/patient-analytics",
+    "/mp-portal/patient-list",
+    "/mp-portal/register-patient",
+    "/page-not-found",
+    "/patient-portal",
+    "/patient-portal/patient-analytics"
+  ]
+}
