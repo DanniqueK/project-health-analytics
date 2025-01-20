@@ -64,10 +64,10 @@
 				  }
 				]
 			  },
-"production-github": {
-              "baseHref": "/github_health_analytics/",
-              "outputPath": "dist/wealthcare-portal/browser"
-  }
+			  "production-github": {
+				"baseHref": "/project-health-analytics/",
+				"outputPath": "dist/wealthcare-portal/browser"
+			  }
 			},
 			"defaultConfiguration": "production"
 		  },
