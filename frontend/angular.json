@@ -65,8 +65,8 @@
 				]
 			  },
 			  "production-github": {
-				"baseHref": "/project-health-analytics/",
-				"outputPath": "dist/wealthcare-portal/browser",
+				"baseHref": "/github_health_analytics/",
+				"outputPath": "dist/browser",
 				"assets": [
             "src/favicon.ico",
             "src/assets",
