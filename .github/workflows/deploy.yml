@@ -24,15 +24,43 @@ jobs:
           npm install -g @angular/cli
           npm install angular-cli-ghpages --save-dev
 
+      - name: Debug Pre-Build
+        working-directory: ./frontend
+        run: pwd && ls -la
+
       - name: Build
         working-directory: ./frontend
         run: |
           ng build --configuration production-github
-          cp dist/browser/index.html dist/browser/404.html
+
+      - name: Debug Post-Build
+        working-directory: ./frontend
+        run: |
+          echo "Current directory structure:"
+          ls -R dist/
+          echo "Attempting to copy files..."
+          DIST_DIR=$(find dist -type d -name "browser" | head -n 1)
+          if [ -n "$DIST_DIR" ]; then
+            echo "Found browser directory at: $DIST_DIR"
+            cp "$DIST_DIR/index.html" "$DIST_DIR/404.html"
+            echo "Files in $DIST_DIR:"
+            ls -la "$DIST_DIR"
+          else
+            echo "Browser directory not found!"
+            echo "Contents of dist:"
+            ls -R dist/
+            exit 1
+          fi
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: frontend/dist/browser
+          folder: frontend/dist/wealthcare-portal/browser
           branch: gh-pages
           clean: true
+
+      - name: Debug Post-Deploy
+        run: |
+          echo "Deployment complete. Checking gh-pages branch..."
+          git checkout gh-pages
+          ls -la
