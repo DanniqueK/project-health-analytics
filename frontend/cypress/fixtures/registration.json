@@ -1,0 +1,53 @@
+{
+	"valid": {
+		"personal": {
+			"firstName": "Maria",
+			"middleName": "David",
+			"lastName": "Wang",
+			"dateOfBirth": "2024-11-21T11:04:51",
+			"marrage": 1,
+			"insurance": "De Christelijke Zorgverzekeraar"
+		},
+		"address": {
+			"street": "Damrak",
+			"city": "Amsterdam",
+			"province": "North-Holland",
+			"country": "Netherlands",
+			"number": "18",
+			"postalCode": "1012 LH",
+			"postalCodeShort": "1012LH"
+		},
+		"contact": {
+			"phone": "+31 06 14984325",
+			"contactName": "Pedro da Silva",
+			"contactPhone": "+31 06 29401938"
+		},
+		"bsn": "928402948",
+		"username": "mariawang"
+	},
+	"invalid": {
+		"BSNTooShort": "92840294",
+		"firstNameTooLong": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+		"postalCodeBadMatch": "1012 L"
+	},
+
+	"validRequestBody": {
+		"firstName": "Maria",
+		"middleName": "David",
+		"lastName": "Wang",
+		"dateOfBirth": "2024-11-21T11:04:51",
+		"marrage": "single",
+		"insurance": "De Christelijke Zorgverzekeraar",
+		"street": "Damrak",
+		"city": "Amsterdam",
+		"province": "North-Holland",
+		"country": "Netherlands",
+		"number": "18",
+		"postalCode": "1012 LH",
+		"phone": "+31 06 14984325",
+		"contactName": "Pedro da Silva",
+		"contactPhone": "+31 06 29401938",
+		"BSN": "928402948",
+		"userName": "mariawang"
+	}
+}

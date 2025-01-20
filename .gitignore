@@ -1,0 +1,22 @@
+# Backend
+target/
+*.class
+.settings/
+.project
+.classpath
+.idea/
+*.iml
+.mvn/
+
+# Frontend
+dist/
+node_modules/
+.angular/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+
+# Common
+.vscode/*
+!.vscode/settings.json
